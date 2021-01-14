@@ -16,7 +16,6 @@ let playerTwoScore = 0;
 let playerOneCounter = 0;
 let playerTwoCounter = 0;
 
-let roll = 0;
 let rollCount = 0;
 
 const rollBtn = document.getElementById("roll-add-btn");
@@ -41,14 +40,6 @@ function hideInstructions() {
     instructionsOverlay.classList.add("hide");
 }
 
-// get Random number
-
-function getRandomNumber() {
-    let min = Math.ceil(1);
-    let max = Math.floor(6);
-    return Math.floor(Math.random() * (max - min) + min);
-}
-
 // check for winner on each iteration
 
 function checkWinner() {
@@ -66,7 +57,7 @@ function checkWinner() {
 // game mechanics
 
 function rollDice() {
-    roll = getRandomNumber();
+    const roll = Math.floor(Math.random() * 6) + 1;
 
     if (rollCount === 2) {
         rollCount = 0;

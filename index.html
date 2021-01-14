@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+        <title>Würfelspiel</title>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="title">Mikes Dice</h1>
+
+            <button id="how-to-btn">?</button>
+
+            <p class="goal">GOAL: 20 Points</p>
+
+            <!-- players -->
+
+            <div class="player-wrapper">
+                <div class="player-one on-turn" id="p1">
+                    <h2 class="player">Player 1</h2>
+                    <p class="score">SCORE: <span id="score-player-one">0</span></p>
+                    <div class="current-roll" id="player-one-roll"></div>
+                </div>
+                <div class="player-two" id="p2">
+                    <h2 class="player">Player 2</h2>
+                    <p class="score">SCORE: <span id="score-player-two">0</span></p>
+                    <div class="current-roll" id="player-two-roll"></div>
+                </div>
+            </div>
+
+            <!-- action button -->
+
+            <div class="buttons">
+                <button id="roll-add-btn">ROLL</button>
+            </div>
+        </div>
+
+        <!-- instructions/winner overlay -->
+
+        <div class="grayzone" id="grayout">
+            <div class="overlay hide" id="winner">
+                <p>Player <span id="player-won"></span> won!</p>
+                <button id="reset-btn">RESET</button>
+            </div>
+            <div class="overlay" id="instructions">
+                <h2>Welcome to Mikes Dice!</h2>
+                <p>How to play:</p>
+                <p>The players roll the dice one at a time and add up their numbers. The golden glow indicates the players turn. The first one to get to 20 points wins the game!</p>
+                <button id="understood">GOT IT</button>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
